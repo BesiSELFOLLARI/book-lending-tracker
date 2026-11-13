@@ -9,7 +9,7 @@ function render() {
   body.innerHTML = loans.map(l => {
     const status = LendLib.getStatus(l);
     const badge = { "On loan": "ok", Overdue: "danger", Returned: "warn" }[status];
-    return `<tr class="${status === "Overdue" ? "overdue" : ""}">
+    return `<tr class="${status === "Overdue" ? "bt-row-overdue" : ""}">
       <td>${e(l.title)}</td><td>${e(l.author)}</td><td>${e(l.borrower)}</td>
       <td>${e(l.dueDate)}</td><td>${e(l.genre)}</td>
       <td><span class="bt-badge bt-badge-${badge}">${status}</span></td>
