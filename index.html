@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Lending Tracker</title>
+  <link rel="stylesheet" href="lib/bt.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="bt-container">
+    <h1>Book Lending Tracker</h1>
+
+    <section class="bt-summary" aria-label="Summary">
+      <div class="bt-card">Total loans: <strong id="totalLoans">0</strong></div>
+      <div class="bt-card">Overdue loans: <strong id="overdueLoans">0</strong></div>
+    </section>
+
+    <form id="loanForm" class="bt-card bt-form" novalidate>
+      <label>Title <input class="bt-input" id="title" required></label>
+      <label>Author <input class="bt-input" id="author" required></label>
+      <label>Borrower <input class="bt-input" id="borrower" required></label>
+      <label>Due date <input class="bt-input" type="date" id="dueDate" required></label>
+      <label>Genre
+        <select class="bt-input" id="genre" required>
+          <option value="">Select genre</option>
+          <option>Fiction</option><option>Non-fiction</option>
+          <option>Science</option><option>History</option>
+          <option>Fantasy</option><option>Other</option>
+        </select>
+      </label>
+      <button class="bt-btn" type="submit">Add loan</button>
+      <p id="formError" class="bt-error" role="alert"></p>
+    </form>
+
+    <div class="bt-table-wrap">
+      <table class="bt-table">
+        <thead>
+          <tr><th>Title</th><th>Author</th><th>Borrower</th><th>Due date</th>
+              <th>Genre</th><th>Status</th><th>Action</th></tr>
+        </thead>
+        <tbody id="loanBody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="lib/lendlib.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
