@@ -1,0 +1,22 @@
+/* bt.css - small reusable UI library (prefix: bt-) */
+:root{--bt-primary:#2563eb;--bt-danger:#dc2626;--bt-ok:#16a34a;--bt-warn:#d97706;
+      --bt-bg:#f3f4f6;--bt-card:#fff;--bt-text:#111827;--bt-border:#d1d5db}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,sans-serif;background:var(--bt-bg);color:var(--bt-text)}
+.bt-container{max-width:1000px;margin:0 auto;padding:1.5rem}
+.bt-card{background:var(--bt-card);border:1px solid var(--bt-border);border-radius:10px;padding:1rem}
+.bt-input{display:block;width:100%;padding:.5rem;margin-top:.25rem;border:1px solid var(--bt-border);border-radius:6px;font:inherit}
+.bt-input:focus{outline:2px solid var(--bt-primary)}
+.bt-btn{background:var(--bt-primary);color:#fff;border:0;border-radius:6px;padding:.5rem 1rem;cursor:pointer;font:inherit}
+.bt-btn:hover{opacity:.9}
+.bt-btn-danger{background:var(--bt-danger)}
+.bt-btn-ok{background:var(--bt-ok)}
+.bt-table-wrap{overflow-x:auto}
+.bt-table{width:100%;border-collapse:collapse;background:var(--bt-card)}
+.bt-table th,.bt-table td{padding:.6rem;border-bottom:1px solid var(--bt-border);text-align:left}
+.bt-table th{background:#e5e7eb}
+.bt-badge{padding:.15rem .5rem;border-radius:999px;color:#fff;font-size:.8rem}
+.bt-badge-ok{background:var(--bt-ok)}
+.bt-badge-warn{background:var(--bt-warn)}
+.bt-badge-danger{background:var(--bt-danger)}
+.bt-error{color:var(--bt-danger);margin:0}
