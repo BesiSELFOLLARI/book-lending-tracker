@@ -1,5 +1,0 @@
-.bt-summary{display:flex;gap:1rem;margin-bottom:1rem}
-.bt-summary .bt-card{flex:1;font-size:1.1rem}
-.bt-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:1.5rem;align-items:end}
-.bt-form .bt-error{grid-column:1/-1}
-tr.overdue{background:#fef2f2}
